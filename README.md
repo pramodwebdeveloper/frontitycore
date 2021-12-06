@@ -1,4 +1,4 @@
-# `@frontity/core`
+# React Frontity Core
 
 [![Version](https://img.shields.io/npm/v/@frontity/core.svg)](https://www.npmjs.com/package/@frontity/core) [![npm](https://img.shields.io/npm/dw/@frontity/core)](https://www.npmjs.com/package/@frontity/core) [![License: Apache--2.0](https://img.shields.io/badge/license-Apache%202-lightgrey)](https://github.com/frontity/frontity/blob/master/LICENSE)
 
