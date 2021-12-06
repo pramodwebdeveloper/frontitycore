@@ -76,6 +76,24 @@ const server = ({ packages }: ServerOptions): ReturnType<Koa["callback"]> => {
       }
     })
   );
+  
+  // Serve sitemap.xml from root or default if it doesn't exists.
+  app.use(
+    get("/sitemap.xml", async (ctx, next) => {
+      if (await promisify(exists)("./sitemap.xml")) {
+        await serve("./")(ctx, next);
+      }
+    })
+  );
+  
+  // Serve Vrinsoft_profile.pdf from root or default if it doesn't exists.
+  app.use(
+    get("/Vrinsoft_profile.pdf", async (ctx, next) => {
+      if (await promisify(exists)("./Vrinsoft_profile.pdf")) {
+        await serve("./")(ctx, next);
+      }
+    })
+  );
 
   /**
    * A helper function for setting 404 status. It's used to ignore HMR if not in
